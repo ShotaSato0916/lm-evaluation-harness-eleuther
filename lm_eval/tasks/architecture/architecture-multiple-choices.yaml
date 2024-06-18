@@ -1,0 +1,9 @@
+task: architecture-multiple-choices
+dataset_path: ShotaSato0916/architecture-multiple-choices
+output_type: multiple_choice
+training_split: train
+validation_split: train
+test_split: train
+doc_to_text: "{{Question}}\nChoices:\n 1) {{Choice1}}\n 2) {{Choice2}}\n 3) {{Choice3}}\n 4) {{Choice4}}\nAnswer:"
+doc_to_target: "{{Answer | int - 1}}"
+doc_to_choice: "{{[Choice1, Choice2, Choice3, Choice4]}}"
